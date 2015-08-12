@@ -144,7 +144,7 @@ form
     display: inline-block;
     padding: .18em;
     margin: .2em .4em 0 .4em;
-    color: black;
+    color: #38393d;
   }
   .borde_blanco_diaNum
   {
@@ -174,6 +174,7 @@ form
     {
       max-width: 18%;
       font-size: 1.1em;
+      border: 1px solid red;
       border-right: 2px solid white;
       display: inline-block;
     }    
