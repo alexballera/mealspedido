@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="description" content="Maquetación en HTML, CSS, Retina Display, Mobile First, Responsive Web Design">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Meals Web Pedidos</title>
+  <link rel="stylesheet" href="static/style/normalize.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../static/style/style.css">
+  <link rel="shortcut icon" type="image/png" href="static/images/logo.png">
+</head>
+<body>
+	<header>
+    <figure>
+      <img src="static/images/small_logo.png" alt="MealsWeb">
+    </figure>
+  </header>
+  <section class="cantina">
+    <div class="cantina__pedido">
+      <h1 class="cantina__pedido--titulo">Cantina Semanal</h1>
+      <p class="cantina__pedido--informacion">Complete la información necesaria para realizar el pedido</p>
+      <p class="cantina__pedido--informacion2">Complete la información</p>
+      <form action="">
+        <input type="text" name="nombre" placeholder="Nombre(requerido)" required id="nombre">
+        <input type="email" name="email" placeholder="Email(requerido)" required id="email">
+        <input type="tel" name="telefono" placeholder="Teléfono" id="telefono">
+        <input type="text" name="postal" placeholder="Zip Code" id="postal">
+        <input type="text" name="direccion" placeholder="Dirección" id="direccion">
+      </form>
+      <section class="calendario">
+        <h1 class="calendario__mes">ENERO</h1>
+        <div class="calendario__semana">
+          <div class="calendario__semana--dia"><div class="borde_blanco_dia">L</div></div>          
+          <div class="calendario__semana--dia"><div class="borde_blanco_dia">M</div></div>
+          <div class="calendario__semana--dia"><div class="borde_blanco_dia">M</div></div>
+          <div class="calendario__semana--dia"><div class="borde_blanco_dia">J</div></div>
+          <div class="calendario__semana--dia"><div class="borde_blanco_dia">V</div></div>  
+        </div>
+        <div class="calendario__semana--Num">
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">1</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">2</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">3</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">4</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">5</div></div>
+        </div>
+        <div class="calendario__semana--Num">
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">1</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">2</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">3</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">4</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">5</div></div>
+        </div>
+        <div class="calendario__semana--Num">
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">1</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">2</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">3</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">4</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">5</div></div>
+        </div>
+        <div class="calendario__semana--Num">
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">1</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">2</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">3</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">4</div></div>
+          <div class="calendario__semana--diaNum"><div class="borde_blanco_diaNum">5</div></div>
+        </div>      
+      </section>      
+    </div>
+  </section>
+  <section class="pedido">
+    <div class="cantina__pedido pedido__semana">    
+      <p class="cantina__pedido--informacion">Seleccione la comida que desea para cada semana</p>
+      <p class="cantina__pedido--informacion2">Seleccione la comida</p>
+      <div class="calendario__semana pedido__semana--dia">
+        <div class="calendario__semana--dia" style="color:white">
+          <div class="borde_blanco_dia">L</div>
+        </div>
+        <form>
+        <div>
+          <label for=""><strong>Comida principal</strong></label>
+        </div>
+        <div>
+          <input type="text" list=seleccionar placeholder="Seleccionar" id="input">
+          <datalist id="seleccionar">
+            <option value="Almuerzo"></option>
+            <option value="Desayuno"></option>
+            <option value="Merienda"></option>
+            <option value="Cena"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="acompanante"><strong>Acompañantes</strong></label>
+        </div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <label for="acompanante"><strong>Adicionales</strong></label>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <label for="acompanante"><strong>Bebidas</strong></label>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante" id="delivery">Delivery   <input type="radio" id="acompanante"></input>   <input type="radio" id="acompanante"></input></div>
+        </form>
+      </div>
+      <div class="calendario__semana pedido__semana--dia">
+        <div class="calendario__semana--dia" style="color:white">
+          <div class="borde_blanco_dia">M</div>
+        </div>
+        <form>
+        <div>
+          <label for=""><strong>Comida principal</strong></label>
+        </div>
+        <div>
+          <input type="text" list=seleccionar placeholder="Seleccionar" id="input">
+          <datalist id="seleccionar">
+            <option value="Almuerzo"></option>
+            <option value="Desayuno"></option>
+            <option value="Merienda"></option>
+            <option value="Cena"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="acompanante"><strong>Acompañantes</strong></label>
+        </div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <label for="acompanante"><strong>Adicionales</strong></label>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <label for="acompanante"><strong>Bebidas</strong></label>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante" id="delivery">Delivery   <input type="radio" id="acompanante"></input>   <input type="radio" id="acompanante"></input></div>
+        </form>
+      </div>
+      <div class="calendario__semana pedido__semana--dia">
+        <div class="calendario__semana--dia" style="color:white">
+          <div class="borde_blanco_dia">M</div>
+        </div>
+        <form>
+          <div>
+          <label for=""><strong>Comida principal</strong></label>
+        </div>
+        <div>
+          <input type="text" list=seleccionar placeholder="Seleccionar" id="input">
+          <datalist id="seleccionar">
+            <option value="Almuerzo"></option>
+            <option value="Desayuno"></option>
+            <option value="Merienda"></option>
+            <option value="Cena"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="acompanante"><strong>Acompañantes</strong></label>
+        </div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <label for="acompanante"><strong>Adicionales</strong></label>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <label for="acompanante"><strong>Bebidas</strong></label>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante" id="delivery">Delivery   <input type="radio" id="acompanante"></input>   <input type="radio" id="acompanante"></input></div>
+        </form>
+      </div>
+      <div class="calendario__semana pedido__semana--dia">
+        <div class="calendario__semana--dia" style="color:white">
+          <div class="borde_blanco_dia">J</div>
+        </div>
+        <form>
+          <div>
+          <label for=""><strong>Comida principal</strong></label>
+        </div>
+        <div>
+          <input type="text" list=seleccionar placeholder="Seleccionar" id="input">
+          <datalist id="seleccionar">
+            <option value="Almuerzo"></option>
+            <option value="Desayuno"></option>
+            <option value="Merienda"></option>
+            <option value="Cena"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="acompanante"><strong>Acompañantes</strong></label>
+        </div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <label for="acompanante"><strong>Adicionales</strong></label>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <label for="acompanante"><strong>Bebidas</strong></label>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante" id="delivery">Delivery   <input type="radio" id="acompanante"></input>   <input type="radio" id="acompanante"></input></div>
+        </form>
+      </div>
+      <div class="calendario__semana pedido__semana--dia without_border">
+        <div class="calendario__semana--dia" style="color:white">
+          <div class="borde_blanco_dia">V</div>
+        </div>
+        <form>
+          <div>
+          <label for=""><strong>Comida principal</strong></label>
+        </div>
+        <div>
+          <input type="text" list=seleccionar placeholder="Seleccionar" id="input">
+          <datalist id="seleccionar">
+            <option value="Almuerzo"></option>
+            <option value="Desayuno"></option>
+            <option value="Merienda"></option>
+            <option value="Cena"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="acompanante"><strong>Acompañantes</strong></label>
+        </div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <label for="acompanante"><strong>Adicionales</strong></label>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <label for="acompanante"><strong>Bebidas</strong></label>
+          <div class="acompanante"><input type="checkbox" id="acompanante">Ensalada Mixta</input></div>
+          <div class="acompanante" id="delivery">Delivery   <input type="radio" id="acompanante"></input>   <input type="radio" id="acompanante"></input></div>
+        </form>
+      </div>
+      <div class="boton">
+        <input type="submit" value="Continuar" class="boton"></input>
+      </div>
+    </div>
+  </section>
+  <footer>
+  <div  class="contacto">
+    <nav>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+      </ul>
+    </nav>
+  </div>    
+    <figure>
+    <img src="static/images/small_logo.png" alt="MealsWeb">
+    </figure>
+  </footer>
+</body>
+</html>
