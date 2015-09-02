@@ -1,50 +1,50 @@
+@charset 'utf-8';
 @import "normalize.css";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
-
-$font-stack:  Open Sans, sans-serif;
 
 body, 
 header, 
 section, 
 figure, 
 img  {
-  font: 100% $font-stack;
+  font-family: Open Sans, sans-serif;
   margin: 0;
   padding: 0;
   font-size: 1em;
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+      -ms-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+      -ms-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
 }
 header figure
 {
   max-width: 150px;
   margin: 1.2em 3em;
   padding: 0;
-  -webkit-transition: .75s;
-  -moz-transition: .75s;
-  -o-transition: .75s;
-  -ms-transition: .75s;
+  @include transition(.75s);
 }
 footer figure
 {
   max-width: 150px;
   margin: 3em auto;
   padding: 0;
-  -webkit-transition: .75s;
-  -moz-transition: .75s;
-  -o-transition: .75s;
-  -ms-transition: .75s;
-
+  @include transition(.75s);
 }  
   header figure:hover,
   footer figure:hover
   {
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  -webkit-transition: .75s;
-  -moz-transition: .75s;
-  -o-transition: .75s;
-  -ms-transition: .75s;
+  @include transform(scale(1.5));
+  @include transition(.75s);
   }
 
 form
@@ -76,28 +76,30 @@ form
   text-align: center;
   background-image: url("../images/grid_background.png"); 
   padding-bottom: 1em;
-}
-  .cantina__pedido
+
+  &__pedido
   {
   width: 640px;
   margin: 0 auto;
   padding: 0;
-  }
-    .cantina__pedido--titulo
+  
+    &--titulo
     {
       margin: 0;
       padding-top: .75em;
     }
-    .cantina__pedido--informacion
+    &--informacion
     {
       font-size: 1.4em;
       margin: 0 auto;
     }
-    .cantina__pedido--informacion2
+    &--informacion2
     {
       font-size: 1.4em;
       display: none;
     }
+  }
+}
 
 .calendario
 {
@@ -105,27 +107,43 @@ form
   color: white;
   text-align: center;
   padding-bottom: 1em;
-}
-  .calendario__mes
+
+  &__mes
   {
     background: #57bbec;
   }
-  .calendario__semana
+  &__semana
   {
     margin: 0;
     padding: 0;
+  
+    &--dia
+    {
+      background: #38393d;
+      font-size: 2em;
+      width: 1.7em;
+      height: 1.7em;
+      border-radius: 50%;
+      display: inline-block;
+      padding: 1px;
+      margin: 10px 3px;
+    }
+    
+    &--diaNum
+    {
+      background: #e1e1e3;
+      font-size: 1.2em;
+      vertical-align: middle;
+      width: 1.8em;
+      height: 1.8em;
+      border-radius: 50%;
+      display: inline-block;
+      padding: .18em;
+      margin: .2em .4em 0 .4em;
+      color: #38393d;
+    }
   }
-  .calendario__semana--dia
-  {
-    background: #38393d;
-    font-size: 2em;
-    width: 1.7em;
-    height: 1.7em;
-    border-radius: 50%;
-    display: inline-block;
-    padding: 1px;
-    margin: 10px 3px;
-  }
+}
   .borde_blanco_dia
   {
     border-radius: 50%;
@@ -138,19 +156,6 @@ form
   .borde_blanco_dia:hover
   {
     background: #57bbec;
-  }
-  .calendario__semana--diaNum
-  {
-    background: #e1e1e3;
-    font-size: 1.2em;
-    vertical-align: middle;
-    width: 1.8em;
-    height: 1.8em;
-    border-radius: 50%;
-    display: inline-block;
-    padding: .18em;
-    margin: .2em .4em 0 .4em;
-    color: #38393d;
   }
   .borde_blanco_diaNum
   {
@@ -169,29 +174,30 @@ form
   text-align: center;
   padding-bottom: 1em;
   
-}
-  .pedido__semana
+
+  &__semana
   {
   width: 900px;
   margin: 0 auto;
   padding: 0;
-  }
-    .pedido__semana--dia
+  
+    &--dia
     {
       max-width: 18%;
       font-size: 1.1em;
-      border: 1px solid red;
       border-right: 2px solid white;
       display: inline-block;
     }    
-      .pedido__semana--dia #input
-      {
-        max-width: 90%;
-      }
-      .acompanante
-      {
-        margin: .2em 0;
-      }
+    &--dia #input
+    {
+      max-width: 90%;
+    }
+  }
+}
+.acompanante
+{
+  margin: .2em 0;
+}
 
 .without_border
     {      
@@ -213,18 +219,12 @@ form
   padding: .4em 0;
   margin-top: .5em;
   border: none;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -o-transition: .3s;
-  -ms-transition: .3s;
+  @include transition(.3s);
 } 
 .boton input:hover {
   background: #57bbec;
   color: grey;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -o-transition: .3s;
-  -ms-transition: .3s;
+  @include transition(.3s);
 }
 
 .contacto
@@ -239,19 +239,13 @@ form
   {
     text-decoration: none;
     color: grey;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
+    @include transition(.3s);
   }
   .contacto a:hover
   {
     background: #57bbec;
     padding: .8em 0;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;   
+    @include transition(.3s);
   }
   .contacto ul
   {    
@@ -300,10 +294,7 @@ form
   header figure
   {
     margin-left: 20%;
-    -webkit-transition: .75s;
-    -moz-transition: .75s;
-    -o-transition: .75s;
-    -ms-transition: .75s;
+    @include transition(.75s);
   }
   .cantina__pedido, .pedido__semana, .contacto
   {
