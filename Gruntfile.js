@@ -14,7 +14,7 @@ grunt.initConfig({
                 '<%= config.app %>/{,*/}*.html',
                 '.tmp/style/{,*/}*.css',
                 '<%= config.app %>/images/{,*/}*',
-                'public/**/*.js', 'public/**/*.html', 'public/**/*.css', 'public/**/*.json'
+                'app/**/*.js', 'public/**/*.html', 'public/**/*.css', 'public/**/*.json'
             ]
         }
     },
